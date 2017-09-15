@@ -1,0 +1,23 @@
+<div class="board-container">
+
+  <div class="board-title-container">
+    <h4 class="board-title"> This is the main board </h4>
+  </div>
+
+  <div id="list-wrapper">
+
+    <div class="item-placeholder" [ngClass]="{'editing': showAddList }">
+      <form class="pt-3 pb-3">
+        <span class="placeholder" [hidden]="showAddList" (click)="toggleAddList()"> Add a list… </span>
+        <input class="item-input" type="text" name="name" placeholder="Enter the list name..." autocomplete="off" autofocus maxlength="512"
+          #newlist [hidden]="!showAddList">
+
+        <div class="item-controls u-clearfix mt-2 mb-2" [hidden]="!showAddList">
+          <button class="btn btn btn-success" (click)="addList(newlist.value); toggleAddList(); newlist.value = ''"> save </button>
+          <span class="cancel-edit" (click)="toggleAddList()"> X </span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

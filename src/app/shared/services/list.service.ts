@@ -22,8 +22,11 @@ export class ListService extends BaseApiService {
       .catch(super.handleError);
   }
 
-  create(list: List): Observable<List> {
-    return this.http.post(`${ListService.baseEndPoint}`, JSON.stringify(list), BaseApiService.defaultOptions)
+  create(title: string): Observable<List> {
+    const data = {
+      title: title
+    };
+    return this.http.post(`${ListService.baseEndPoint}`, JSON.stringify(data), BaseApiService.defaultOptions)
       .map(res => res.json())
       .catch(super.handleError);
   }

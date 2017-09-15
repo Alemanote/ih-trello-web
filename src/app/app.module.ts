@@ -1,3 +1,5 @@
+import { BoardComponent } from './components/board/board.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ToastService } from './shared/services/toast.service';
 import { ToastModule } from 'ng2-toastr';
 import { Ng2BootstrapModule } from 'ng-bootstrap/ng2-bootstrap';
@@ -16,7 +18,9 @@ import './rxjs.operators';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
