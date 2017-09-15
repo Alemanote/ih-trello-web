@@ -15,12 +15,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import './rxjs.operators';
+import { ListComponent } from './components/list/list.component';
+import { CardComponent } from './components/card/card.component';
+import { PlaceholderComponent } from './components/list/placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BoardComponent
+    BoardComponent,
+    ListComponent,
+    CardComponent,
+    PlaceholderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,6 @@ import './rxjs.operators';
     FormsModule,
     DragulaModule,
     BrowserAnimationsModule,
-    Ng2BootstrapModule.forRoot(),
     ToastModule.forRoot()
   ],
   providers: [

@@ -6,6 +6,11 @@
 
   <div id="list-wrapper">
 
+    <div id="list-wrapper-container">
+      <app-list [id]="list._id" *ngFor="let list of lists" [list]="list" 
+        (onEdit)="onEditList($event)" (onDelete)="onDeleteList($event)"></app-list>
+    </div>
+    
     <div class="item-placeholder" [ngClass]="{'editing': showAddList }">
       <form class="pt-3 pb-3">
         <span class="placeholder" [hidden]="showAddList" (click)="toggleAddList()"> Add a list… </span>
